@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voidhenge Support</title>
+<meta name="description" content="Help with Voidhenge, a puzzle game for iPhone and iPad: devices, progress, hints, the Daily Henge, purchases, accessibility, and how to contact the developer.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e1620'/%3E%3Crect x='6' y='6' width='9' height='9' rx='1.5' fill='none' stroke='%237fd3e6' stroke-width='1.6'/%3E%3Crect x='17' y='6' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Crect x='6' y='17' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Crect x='17' y='17' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Ccircle cx='21.5' cy='21.5' r='2.6' fill='%23c9a24a'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --surface: #ffffff;
+    --ink: #1b2229;
+    --muted: #55606b;
+    --rule: #dcd8cf;
+    --accent: #7d5f17;
+    --link: #1f5f86;
+    --void: #2b8aa3;
+    --chip: #ece8de;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c131b;
+      --surface: #131d28;
+      --ink: #e7ebef;
+      --muted: #a3afbb;
+      --rule: #263342;
+      --accent: #d9b45c;
+      --link: #8fd6ea;
+      --void: #7fd3e6;
+      --chip: #1a2633;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c131b;
+    --surface: #131d28;
+    --ink: #e7ebef;
+    --muted: #a3afbb;
+    --rule: #263342;
+    --accent: #d9b45c;
+    --link: #8fd6ea;
+    --void: #7fd3e6;
+    --chip: #1a2633;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--void); outline-offset: 2px; border-radius: 3px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 12px; background: var(--surface); padding: 6px 10px; z-index: 2; }
+  header.site {
+    border-bottom: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  .bar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .brand svg { width: 30px; height: 30px; flex: none; }
+  nav.links { display: flex; gap: 6px; }
+  nav.links a {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+  }
+  nav.links a[aria-current="page"] { background: var(--chip); color: var(--ink); font-weight: 600; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 24px; }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 40px 0 10px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--void);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 0 0 8px;
+  }
+  .contact p:last-child { margin-bottom: 0; }
+  .contact a { font-weight: 600; overflow-wrap: anywhere; }
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+  }
+  .toc a {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--chip);
+    color: var(--ink);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+  }
+  footer.site {
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer.site .bar { padding-top: 18px; padding-bottom: 28px; }
+  footer.site a { color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the answers</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="support.html" aria-label="Voidhenge support home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e1620"/><rect x="6" y="6" width="9" height="9" rx="1.5" fill="none" stroke="#7fd3e6" stroke-width="1.6"/><rect x="17" y="6" width="9" height="9" rx="1.5" fill="#415266"/><rect x="6" y="17" width="9" height="9" rx="1.5" fill="#415266"/><rect x="17" y="17" width="9" height="9" rx="1.5" fill="#415266"/><circle cx="21.5" cy="21.5" r="2.6" fill="#c9a24a"/></svg>
+      Voidhenge
+    </a>
+    <nav class="links" aria-label="Pages">
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <p class="eyebrow">Voidhenge</p>
+  <h1>Support</h1>
+  <p class="lede">Voidhenge is a quiet puzzle game about turning stone around a void. These answers cover most
+  questions.</p>
+
+  <div class="contact">
+    <p><strong>Need a hand?</strong> Email <a href="mailto:cartryder29@gmail.com">cartryder29@gmail.com</a>.
+    Say which device and iOS version you use, and the game’s version (Settings ▸ About ▸ Version).</p>
+  </div>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#devices">Devices</a></li>
+    <li><a href="#progress">Progress</a></li>
+    <li><a href="#hints">Hints</a></li>
+    <li><a href="#daily">Daily Henge</a></li>
+    <li><a href="#purchases">Purchases</a></li>
+    <li><a href="#sound">Sound</a></li>
+    <li><a href="#accessibility">Accessibility</a></li>
+    <li><a href="#problem">Report a problem</a></li>
+  </ul>
+
+  <h2 id="devices">Which devices does it run on?</h2>
+  <p>iPhone and iPad, on iOS 15.0 or later. The game is played upright (on iPad, either way up). A keyboard or
+  a game controller can play every screen.</p>
+
+  <h2 id="progress">Where is my progress kept?</h2>
+  <p>On your device, in the game’s own storage. It is saved the moment you solve a level and after every move,
+  so closing the app mid-level brings you back to the same board.</p>
+  <p>Your progress goes with your device’s own backup, like any app’s data. A new iPhone or iPad set up from an
+  iCloud or computer backup, or with Quick Start, brings it along. There is no account and no sync between two
+  devices, so a level solved on your iPad does not appear on your iPhone. Deleting the game deletes its
+  progress.</p>
+  <p><strong>Starting over:</strong> Settings ▸ Reset ▸ Reset all progress… (it asks first) clears your progress
+  and keeps your settings. Restore default settings… does the opposite.</p>
+
+  <h2 id="hints">How do hints work?</h2>
+  <p>Every board, each level and each Daily Henge, starts with <strong>10 free hints</strong>. Press Hint and
+  the board points to the peg to move. Press it again and it shows which way to turn it. That uses one hint.
+  Being shown an answer you have already paid for costs nothing, until you solve the board.</p>
+  <p>A hint never takes a star away, but a level solved with one is noted on the results card, and its stars
+  are drawn hollow. Solve a level with three stars and no hint to make it perfect.</p>
+  <p>When a board’s hints run out, Hint offers to <strong>Buy 10 hints</strong> for it at the price shown, which
+  comes from the App Store in your currency, as many times as you like. Not now closes the offer and leaves the
+  board as it was.</p>
+  <p>Extra hints belong to the board you got them for, and they stay if you leave and come back. When you solve
+  that board, it goes back to 10 free hints and <strong>any extra hints you didn’t use are gone</strong>, so it
+  is worth getting only what you need. A Daily Henge’s extra hints also end when its day does, and each new
+  day’s board starts with 10 free hints.</p>
+  <p>Stuck without hints? Undo takes back a move, Restart puts the board back as it began, and the pause menu’s
+  “How it works” explains every mechanism you have met so far.</p>
+
+  <h2 id="daily">What is the Daily Henge?</h2>
+  <p>A new board each day, the same for everyone, chosen from your device’s own date, with no connection
+  needed. It appears on the title screen once you have met every mechanism its boards use, and the results card
+  counts how many days in a row you have solved one.</p>
+
+  <h2 id="purchases">Purchases and the Tip jar</h2>
+  <p>Voidhenge is free. You can buy hint packs when a board runs out of hints, and leave an optional tip in
+  Settings ▸ About ▸ Tip jar. Tips come in six sizes, from $1 to $100 or the equivalent in your currency. A
+  tip unlocks nothing; it is simply a thank-you, and it is very much appreciated.</p>
+  <ul>
+    <li><strong>A purchase was interrupted.</strong> If the app closed or the connection dropped, the purchase
+    is completed the next time you open the game.</li>
+    <li><strong>Waiting for approval.</strong> With Ask to Buy, a purchase goes through once a parent
+    approves it.</li>
+    <li><strong>Restoring.</strong> Hint packs and tips are consumables: the App Store cannot restore them, and
+    they are not shared between your devices. Hints you have not used yet go with your device’s backup, like
+    the rest of your progress.</li>
+    <li><strong>Refunds.</strong> Apple handles all payments and refunds. Request one at
+    <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h2 id="sound">The game is silent.</h2>
+  <p>Voidhenge follows your Ring/Silent switch, like the system’s own sounds, so switch it to ring. Music and
+  effects each have a slider under Settings ▸ Sound. While another app is playing audio, the game’s music steps
+  aside and its effects carry on; the music returns when the other audio stops.</p>
+
+  <h2 id="accessibility">Accessibility</h2>
+  <p>Settings ▸ Accessibility has Reduced motion, High contrast, Colour-blind mode (every crystal and its seat
+  also have their own shape, so colour is never the only cue) and Read aloud, which speaks each screen, the
+  control you move to and every move in your device’s voice.</p>
+  <p>Settings ▸ Display has Interface size (Standard, Larger or Largest), Brighter board for bright daylight or
+  a dimmed screen, Keep screen awake, and Battery saver, which caps the frame rate at 30. On first launch the
+  game follows your device’s Reduce Motion, Increase Contrast and text size, and keeps following them unless you
+  choose otherwise in the game.</p>
+
+  <h2 id="sharing">Sharing a solved board</h2>
+  <p>Press Share on the results card to send a picture of the finished board, with the level and your stars,
+  through your device’s share sheet. Choosing Save Image there asks once for permission to add the picture to
+  Photos.</p>
+
+  <h2 id="privacy">Privacy</h2>
+  <p>No accounts, no tracking, and your progress and settings never leave your device. Read the full
+  <a href="privacy.html">privacy policy</a>.</p>
+
+  <h2 id="problem">Reporting a problem</h2>
+  <div class="contact">
+    <p>Email <a href="mailto:cartryder29@gmail.com">cartryder29@gmail.com</a> with your device, its iOS version,
+    the game’s version (Settings ▸ About ▸ Version) and, if you can, the level and what you did just before. A
+    screenshot helps.</p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="bar">
+    <span>© 2026 Voidhenge</span>
+    <span><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:cartryder29@gmail.com">Contact</a></span>
+  </div>
+</footer>
+</body>
+</html>

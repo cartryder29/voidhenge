@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Voidhenge</title>
+<meta name="description" content="How Voidhenge, a puzzle game for iPhone and iPad, handles your information: no accounts, no tracking, nothing collected, and purchases through Apple.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e1620'/%3E%3Crect x='6' y='6' width='9' height='9' rx='1.5' fill='none' stroke='%237fd3e6' stroke-width='1.6'/%3E%3Crect x='17' y='6' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Crect x='6' y='17' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Crect x='17' y='17' width='9' height='9' rx='1.5' fill='%23415266'/%3E%3Ccircle cx='21.5' cy='21.5' r='2.6' fill='%23c9a24a'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --surface: #ffffff;
+    --ink: #1b2229;
+    --muted: #55606b;
+    --rule: #dcd8cf;
+    --accent: #7d5f17;
+    --link: #1f5f86;
+    --void: #2b8aa3;
+    --chip: #ece8de;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c131b;
+      --surface: #131d28;
+      --ink: #e7ebef;
+      --muted: #a3afbb;
+      --rule: #263342;
+      --accent: #d9b45c;
+      --link: #8fd6ea;
+      --void: #7fd3e6;
+      --chip: #1a2633;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c131b;
+    --surface: #131d28;
+    --ink: #e7ebef;
+    --muted: #a3afbb;
+    --rule: #263342;
+    --accent: #d9b45c;
+    --link: #8fd6ea;
+    --void: #7fd3e6;
+    --chip: #1a2633;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--void); outline-offset: 2px; border-radius: 3px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 12px; background: var(--surface); padding: 6px 10px; z-index: 2; }
+  header.site {
+    border-bottom: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  .bar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .brand svg { width: 30px; height: 30px; flex: none; }
+  nav.links { display: flex; gap: 6px; }
+  nav.links a {
+    text-decoration: none;
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+  }
+  nav.links a[aria-current="page"] { background: var(--chip); color: var(--ink); font-weight: 600; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .updated { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 40px 0 10px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--void);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 0 0 8px;
+  }
+  .card ul { margin: 0; }
+  .card p:last-child { margin-bottom: 0; }
+  .contact {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .contact a { font-weight: 600; overflow-wrap: anywhere; }
+  footer.site {
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer.site .bar { padding-top: 18px; padding-bottom: 28px; }
+  footer.site a { color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to the policy</a>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="support.html" aria-label="Voidhenge support home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e1620"/><rect x="6" y="6" width="9" height="9" rx="1.5" fill="none" stroke="#7fd3e6" stroke-width="1.6"/><rect x="17" y="6" width="9" height="9" rx="1.5" fill="#415266"/><rect x="6" y="17" width="9" height="9" rx="1.5" fill="#415266"/><rect x="17" y="17" width="9" height="9" rx="1.5" fill="#415266"/><circle cx="21.5" cy="21.5" r="2.6" fill="#c9a24a"/></svg>
+      Voidhenge
+    </a>
+    <nav class="links" aria-label="Pages">
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <p class="eyebrow">Voidhenge</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: October 13, 2026</p>
+
+  <p>Voidhenge is a puzzle game for iPhone and iPad, made by an independent developer (“we”). This
+  policy explains what happens to information when you play it.</p>
+
+  <div class="card">
+    <p><strong>In short</strong></p>
+    <ul>
+      <li>No accounts, no sign-in, no analytics and no tracking.</li>
+      <li>The game collects no personal information, so it has none to pass on to anyone.</li>
+      <li>Your progress and settings stay on your device. We never receive them.</li>
+      <li>Tips and hint packs are bought through Apple. We never see your payment details.</li>
+    </ul>
+    <p>The game sums it up in a line of its own, under Settings ▸ About ▸ Privacy.</p>
+  </div>
+
+  <h2>What stays on your device</h2>
+  <p>Your progress (the levels you have solved, your moves and stars, and your Daily Henge results), your
+  settings, and the number of hints left on each board are stored only on your device, in the game’s own
+  storage. They are never sent to us or to anyone else.</p>
+  <p>Like any app’s data, they are included in your device’s own backups (iCloud Backup or a backup to a
+  computer), and Quick Start moves them to a new device. Deleting the game deletes them from your device.</p>
+
+  <h2>Purchases</h2>
+  <p>Voidhenge is free to download. Inside the game you can buy two things, both through Apple’s App Store:</p>
+  <ul>
+    <li><strong>Hint packs:</strong> 10 more hints for the board you are playing.</li>
+    <li><strong>Tips:</strong> an optional thank-you to the developer. A tip unlocks nothing.</li>
+  </ul>
+  <p>Apple handles every purchase through your Apple Account. We never receive your name, email address,
+  Apple Account or payment details. The game receives only Apple’s confirmation that a purchase went
+  through, so that it can add the hints or say thank you. Prices come from the App Store, in your own
+  currency. Apple’s handling of your purchases is covered by
+  <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+
+  <h2>No third-party SDKs, analytics or tracking</h2>
+  <p>The game is built with the open-source Godot Engine, which collects nothing, and it contains no
+  third-party SDKs and no analytics. It does not track you, and it never asks for permission to track you.
+  Nothing about how you play is sent anywhere.</p>
+
+  <h2>Sharing a picture</h2>
+  <p>If you press Share on a results card, the game hands a picture of the finished board, and one line about
+  it, to your device’s share sheet. Where it goes from there is your choice, and the game keeps no record of
+  it. If you choose Save Image, iOS asks your permission to add the picture to Photos. The game never reads
+  your photo library.</p>
+
+  <h2>What the game connects to</h2>
+  <p>The game connects to the internet only through Apple’s App Store, to show prices and to complete a
+  purchase you start. Everything else works offline. The Daily Henge comes from your device’s own date.</p>
+
+  <h2>Children</h2>
+  <p>Voidhenge is suitable for everyone. The game collects no personal information from anyone, including
+  children. On a child’s device, Apple’s Ask to Buy and Screen Time settings control purchases.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>Every level can be played without buying anything. Hints are optional help.</li>
+    <li>You can reset your progress in Settings ▸ Reset, or erase all of the game’s data by deleting it.</li>
+  </ul>
+  <p>Because we collect no personal information, we hold nothing about you to access, correct, delete, sell
+  or share. If you email us, we use your address and message only to reply to you, and we don’t keep
+  them longer than needed.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the new version will be posted on this page with a new date.</p>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <p>Questions about this policy: <a href="mailto:cartryder29@gmail.com">cartryder29@gmail.com</a></p>
+    <p>Help with the game: <a href="support.html">Voidhenge Support</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="bar">
+    <span>© 2026 Voidhenge</span>
+    <span><a href="support.html">Support</a> · <a href="privacy.html">Privacy Policy</a> ·
+    <a href="mailto:cartryder29@gmail.com">Contact</a></span>
+  </div>
+</footer>
+</body>
+</html>
